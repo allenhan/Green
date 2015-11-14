@@ -1,0 +1,224 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "";
+}
+
+@section PageSpecificStyleSheetIncludes{
+    <style>
+        .sli {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .pro-left {
+            display: block;
+            float: left;
+            position: relative;
+            width: 50%;
+        }
+
+        .pro-right {
+            display: block;
+            float: right;
+            position: relative;
+            width: 50%;
+        }
+
+        .big-img {
+            display: block;
+            width: 529px;
+            height: 530px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url("/Assets/Img/bigimg.png");
+        }
+
+        .pro-right pr-til {
+            width: 100%;
+            float: left;
+            color: #3e3e3e;
+            font-size: 24px;
+            line-height: 25px;
+            font-weight: normal;
+        }
+
+        .pr-price {
+            width: 100%;
+            float: left;
+            color: #e30500;
+            font-size: 32px;
+            line-height: 36px;
+            font-weight: normal;
+            margin-top: 25px;
+        }
+
+        .pro-yunfee {
+            width: 100%;
+            float: left;
+            padding-top: 8px;
+            color: #808080;
+        }
+
+        .lbl-info {
+            float: left;
+            line-height: 42px;
+        }
+
+        .num-wrap .pro-addwrap {
+            display: inline-block;
+            float: left;
+        }
+
+        .pro-addwrap {
+            border: 1px solid #a6a6a6;
+        }
+
+        .st-main {
+            width: 386px;
+            position: relative;
+            float: left;
+        }
+
+        .l1 {
+            padding-top: 30px;
+            overflow: hidden;
+            padding-left: 6px;
+            padding-bottom: 10px;
+        }
+
+        .l2 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .l3 {
+            padding-top: 28px;
+            padding-bottom: 15px;
+        }
+
+        .pro-addwrap .minus, .pro-addwrap .plus {
+            display: inline-block;
+            line-height: 28px;
+            width: 28px;
+            text-align: center;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .minus {
+            border-right: 1px solid #a6a6a6;
+        }
+
+        .plus {
+            border-left: 1px solid #a6a6a6;
+        }
+
+        .pro-addwrap .input {
+            display: inline-block;
+            line-height: 28px;
+            width: 32px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+
+        .ver-wrap .ver-addwrap {
+            display: inline-block;
+            border: 1px solid #4faf33;
+            text-align: center;
+            color: #666;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .ver-wrap, .num-wrap {
+            margin-left: 70px;
+        }
+
+        .clear {
+            clear: both;
+            width: 0px;
+            height: 0px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .sml-img {
+            width: 530px;
+            height: 80px;
+            line-height: 80px;
+            float: left;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .sml-img a {
+                width: 80px;
+                height: 80px;
+                float: left;
+                display: inline-block;
+                overflow: hidden;
+                border: 1px solid #ddd;
+                text-decoration:none;
+            }
+
+        .narrow-img {
+        margin-left:32px;
+        }
+
+        .narrow-img-current {
+            border: 1px solid #9ccf8d;
+        }
+        
+    </style>
+}
+
+<div class="sli">
+    <div class="green-header-wrap-1240">
+
+        <div class="pro-left">
+            <div class="big-img"></div>
+            <div class="sml-img">
+              <a href="javascript:void(null)" class="narrow-img narrow-img-current"></a>
+              <a href="javascript:void(null)" class="narrow-img"></a>
+              <a href="javascript:void(null)" class="narrow-img"></a>
+              <a href="javascript:void(null)" class="narrow-img"></a>
+            </div>
+        </div>
+
+        <div class="pro-right">
+            <div class="st-main">
+                <h1 class="pr-til">Title</h1>
+                <h2 class="pr-price">2699</h2>
+                <h5 class="pro-yunfee">运费:10元</h5>
+                <div class="pro-info">
+                    <div class="l1">
+                        <span class="lbl-info">规格</span>
+                        <div class="ver-wrap">
+                            <a href="javascript:void();" class="ver-addwrap">500g</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pro-info">
+                    <div class="l1 l2">
+                        <span class="lbl-info">数量</span>
+                        <ul class="num-wrap">
+                            <li class="pro-addwrap">
+                                <a href="javascript:void()" class="minus">-</a>
+                                <span class="input">1</span>
+                                <a href="javascript:void()" class="plus">+</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pro-info">
+                    <div class="l3">
+                        <button type="button" class="btn btn-success btn-lg"> 立刻购买</button>
+                        <button type="button" class="btn btn-default btn-lg"> 加入购物车</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

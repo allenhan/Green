@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Green.Health", "Green.Health\Green.Health.csproj", "{236B93CD-735D-4CF6-9886-FB96052BF3F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Green.Health.Tests", "Green.Health.Tests\Green.Health.Tests.csproj", "{480232DE-3A65-48F3-9E91-D999D3D26AAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Green.Helth.Business", "Green.Helth.Business\Green.Helth.Business.csproj", "{BBABD13B-EB88-45CE-A8A9-A706E42B7644}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Green.Health.Data", "Green.Health.Data\Green.Health.Data.csproj", "{1EC95DAF-CB42-4302-8CF5-AD734FE12907}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{236B93CD-735D-4CF6-9886-FB96052BF3F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{236B93CD-735D-4CF6-9886-FB96052BF3F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{236B93CD-735D-4CF6-9886-FB96052BF3F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{236B93CD-735D-4CF6-9886-FB96052BF3F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{480232DE-3A65-48F3-9E91-D999D3D26AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{480232DE-3A65-48F3-9E91-D999D3D26AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{480232DE-3A65-48F3-9E91-D999D3D26AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{480232DE-3A65-48F3-9E91-D999D3D26AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBABD13B-EB88-45CE-A8A9-A706E42B7644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBABD13B-EB88-45CE-A8A9-A706E42B7644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBABD13B-EB88-45CE-A8A9-A706E42B7644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBABD13B-EB88-45CE-A8A9-A706E42B7644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EC95DAF-CB42-4302-8CF5-AD734FE12907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EC95DAF-CB42-4302-8CF5-AD734FE12907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EC95DAF-CB42-4302-8CF5-AD734FE12907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EC95DAF-CB42-4302-8CF5-AD734FE12907}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

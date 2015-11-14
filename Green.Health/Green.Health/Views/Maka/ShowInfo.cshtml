@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "首页";
+}
+@section PageSpecificStyleSheetIncludes
+{
+    <style>
+        .imgcontainer {
+            width: 100%;
+            min-width: 1240px;
+            float: left;
+            position: relative;
+            margin: 80px auto;
+            background-color: #fff;
+            overflow: hidden;
+        }
+
+        img {
+            border: none;
+            vertical-align: middle;
+            max-width: 100%;
+        }
+    </style>
+}
+<nav class="subnav">
+    <div class="subnav-wrap">
+         <h2 class="nav_sub_title">玛  卡</h2>
+        <div class="nav_sub_desp">
+            @*<a href="#">产品信息</a>
+            <span>|</span>
+            <a href="#">产地来源</a>
+            <span>|</span>
+            <a href="#">产品药理</a>*@
+            <span class="btn btn-success" id="btnbuy">立即订购</span>
+        </div>
+    </div>
+
+</nav>
+<div class="imgcontainer">
+    <p text-align:center;><img src="/Assets/Img/desp6.jpg" /></p>
+    <p text-align:center;><img src="/Assets/Img/desp1.jpg" /></p>
+    <p text-align:center;><img src="/Assets/Img/desp2.jpg" /></p>
+    <p text-align:center;><img src="/Assets/Img/desp3.jpg" /></p>
+    <p text-align:center;><img src="/Assets/Img/desp4.jpg" /></p>
+    <p text-align:center;><img src="/Assets/Img/desp5.jpg" /></p>
+</div>
+
+@section PageSpecificJavascriptIncludes{
+   <script>
+       $("#btnbuy").bind('click', function (e) {
+           window.location.href = "/Product/Detail";
+       });
+    </script>
+     }
