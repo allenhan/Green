@@ -2,4 +2,132 @@
     ViewBag.Title = "comfirm_order";
 }
 
-<h2>comfirm_order</h2>
+@section PageSpecificStyleSheetIncludes{
+    <style type="text/css">
+    .comfirm-header {
+    }
+
+        .comfirm-flow {
+            height:120px;
+            display:block;
+        }
+
+        .receiver-info {
+          display:block;
+            
+        }
+
+        .address-list {
+         width:1200px;
+        }
+        .addr {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            width: 237px;
+            height: 106px;
+            margin: 0 14px 14px 0;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .inner {
+            z-index: 2;
+            position: relative;
+            padding: 11px 15px;
+            border:1px dashed;
+            overflow: hidden;
+        }
+        h2 {
+            display: block;
+            font-size: 1.5em;
+            -webkit-margin-before: 0.83em;
+            -webkit-margin-after: 0.83em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+            font-weight: bold;
+        }
+     </style>
+}
+    
+<div class="green-header-wrap-1240">
+    <div class="comfirm-flow">
+        
+    </div>
+
+    <div class="receiver-info">
+      <h2>选择收货地址</h2>
+        <div class="address-list" style="display:block">
+            <div class="addr">
+               <div class="inner">
+                   <div class="addr-hd">
+                       <span class="province">上海</span>
+                       <span class="city">上海</span>
+                       <span class="name">hanjun</span>
+                   </div>
+                   <div class="addr-bd">
+                       <span class="dist">长宁</span>
+                       <span class="town">新景</span>
+                       <span class="street">金钟路968号 凌空SOHO 大楼15#</span>
+                       <span class="phone">123456789</span>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ctl">
+        <button>使用新地址</button>
+    </div>
+
+    @*<div class="payInfo">
+        <span>支付方式</span>
+        <div class="pay-sytle">
+            <a>支付宝</a>
+        </div>
+    </div>*@
+
+    <h2>确认订单信息</h2>
+    <div class="pro-detailinfo">
+        <table>
+            <colgroup>
+                <col />
+                <col />
+                <col />
+                <col />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </td>
+                    <td>
+                       276 
+                    </td>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        276
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="payment-info">
+        <p>
+            <span>实首款</span>
+            <span>¥</span>
+            <span>99</span>
+        </p>
+    </div>
+
+    <div class="submit-order">
+        <button class="btn btn-success">提交订单</button>
+    </div>
+
+</div>
