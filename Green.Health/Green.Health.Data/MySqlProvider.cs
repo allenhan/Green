@@ -29,7 +29,8 @@ namespace Green.Health.Data
         }
         public override void CloseConnect(IDbConnection connection)
         {
-            connection.Close();
+            if (connection.State != ConnectionState.Closed)
+                connection.Close();
         }
     }
 }

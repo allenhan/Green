@@ -8,11 +8,6 @@ using System.Data;
 
 namespace Green.Health.Data
 {
-    public class DbHelper
-    {
-
-    }
-
     public class DBResponsity
     {
         private static DbProvider dbprovider = null;
@@ -23,6 +18,23 @@ namespace Green.Health.Data
             try
             {
                 return connection.Execute(sql);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                dbprovider.CloseConnect(connection);
+            }
+        }
+
+        public static List<T> Query<T>(string sql)
+        {
+            IDbConnection connection = dbprovider.OpenConnect();
+            try
+            {
+                return connection.Query<T>(sql).ToList();
             }
             catch (Exception)
             {
