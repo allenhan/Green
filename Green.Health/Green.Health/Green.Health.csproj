@@ -104,6 +104,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\AuthorizeFilterAttribute.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MaKaController.cs" />
@@ -144,6 +146,7 @@
     <Content Include="Assets\Img\person.png" />
     <Content Include="Assets\JS\header.js" />
     <Content Include="Assets\JS\jquery-1.8.3.min.js" />
+    <Content Include="Config\dal.xml" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

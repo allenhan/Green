@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace Green.Health.Controllers
 {
-    public class LoginController : Controller
+    public class LoginController : BaseController
     {
         //
         // GET: /Login/
@@ -22,10 +22,19 @@ namespace Green.Health.Controllers
         {
             string uid = collection["userno"].ToString();
             string pwd = collection["passwd"].ToString();
+            string prePath = HttpContext.Session["visitpath"] != null ? HttpContext.Session["visitpath"].ToString() : "";
+
             HttpCookie cookie = new HttpCookie("#555", uid);
             LoginService.CheckLogin("111", "222");
             Response.Cookies.Add(cookie);
-            return RedirectToAction("ShowInfo", "MaKa");
+            
+            if (string.IsNullOrEmpty(prePath))
+            {
+                return RedirectToAction("ShowInfo", "MaKa");
+            }
+            {
+                return View();
+            }
         }
     }
 }

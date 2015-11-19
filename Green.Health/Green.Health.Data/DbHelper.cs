@@ -15,7 +15,7 @@ namespace Green.Health.Data
 
     public class DBResponsity
     {
-        private static DbProvider dbprovider=DbProviderFactory.CreateInstance("");
+        private static DbProvider dbprovider = null;
 
         public static int ExcecuteCmd(string sql)
         {

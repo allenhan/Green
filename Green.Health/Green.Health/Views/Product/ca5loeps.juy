@@ -224,9 +224,8 @@
 </div>
 @section PageSpecificJavascriptIncludes{
     <script>
-        $("#btn-buy").bind('click', function (e) {
-            
-            window.location.href = "/Order/comfirm_order";
+        $("#btnbuy").bind('click', function (e) {
+            window.location.href = "/Product/Detail";
         });
     </script>
 }

@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Green.Health.Controllers
 {
-    public class OrderController : Controller
+    public class OrderController : BaseController
     {
         //
         // GET: /Order/
@@ -17,8 +17,13 @@ namespace Green.Health.Controllers
         }
 
         
-        public ActionResult comfirm_order()
+        public ActionResult comfirm_order(int id)
         {
+            if (System.Web.HttpContext.Current.Request.Cookies["Servers%5FEid"] == null)
+            {
+                HttpContext.Session.Add("visitpath", HttpContext.Request.Path);
+                return RedirectToAction("Index", "Login");
+            }
             return View();
         }
     }

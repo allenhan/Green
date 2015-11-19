@@ -10,16 +10,20 @@ namespace Green.Health.Data
 {
     public class MySqlProvider : DbProvider
     {
+        public string ConnectString
+        {
+            get;
+            set;
+        }
 
         public MySqlProvider(string conString)
-            : base(conString)
         {
-
+            this.ConnectString = conString;
         }
 
         public override IDbConnection OpenConnect()
         {
-            IDbConnection connection = new MySql.Data.MySqlClient.MySqlConnection(connectString);
+            IDbConnection connection = new MySql.Data.MySqlClient.MySqlConnection(ConnectString);
             connection.Open();
             return connection;
         }
@@ -28,5 +32,4 @@ namespace Green.Health.Data
             connection.Close();
         }
     }
-
 }

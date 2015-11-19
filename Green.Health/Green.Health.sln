@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Green.Helth.Business", "Gre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Green.Health.Data", "Green.Health.Data\Green.Health.Data.csproj", "{1EC95DAF-CB42-4302-8CF5-AD734FE12907}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Green.Utility", "Green.Utility\Green.Utility.csproj", "{6EB51497-6171-4D6D-9865-F7EA74022784}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{1EC95DAF-CB42-4302-8CF5-AD734FE12907}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EC95DAF-CB42-4302-8CF5-AD734FE12907}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EC95DAF-CB42-4302-8CF5-AD734FE12907}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EB51497-6171-4D6D-9865-F7EA74022784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EB51497-6171-4D6D-9865-F7EA74022784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EB51497-6171-4D6D-9865-F7EA74022784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EB51497-6171-4D6D-9865-F7EA74022784}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
