@@ -10,20 +10,19 @@ namespace Green.Health.Data
 {
     public class MySqlProvider : DbProvider
     {
-        public string ConnectString
+        private DataBaseSet dbset = null;
+
+        public MySqlProvider(DataBaseSet dataBaseSet)
         {
-            get;
-            set;
+        
+            this.dbset = dataBaseSet;
         }
 
-        public MySqlProvider(string conString)
+        public override IDbConnection OpenConnect(DataBaseRW RWFlag)
         {
-            this.ConnectString = conString;
-        }
-
-        public override IDbConnection OpenConnect()
-        {
-            IDbConnection connection = new MySql.Data.MySqlClient.MySqlConnection(ConnectString);
+            string type=RWFlag==DataBaseRW.Read?"R":"W";
+            string connectstring = dbset.DBItems.Find(c => c.DataBaseType == type).ConnectString;
+            IDbConnection connection = new MySql.Data.MySqlClient.MySqlConnection(connectstring);
             connection.Open();
             return connection;
         }

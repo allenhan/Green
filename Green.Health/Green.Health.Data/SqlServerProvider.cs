@@ -10,20 +10,18 @@ namespace Green.Health.Data
     public class SqlServerProvider:DbProvider
     {
 
-        public string ConnectString
+        private DataBaseSet dbset = null;
+
+        public SqlServerProvider(DataBaseSet dbset)
         {
-            get;
-            set;
+            this.dbset = dbset;
         }
 
-        public SqlServerProvider(string connectStr)
+        public override System.Data.IDbConnection OpenConnect(DataBaseRW RWFlag)
         {
-            this.ConnectString = connectStr;
-        }
-
-        public override System.Data.IDbConnection OpenConnect()
-        {
-            IDbConnection connection = new SqlConnection(this.ConnectString);
+            string type = RWFlag == DataBaseRW.Read ? "R" : "W";
+            string connectstring = dbset.DBItems.Find(c => c.DataBaseType == type).ConnectString;
+            IDbConnection connection = new SqlConnection(connectstring);
             connection.Open();
             return connection;
         }

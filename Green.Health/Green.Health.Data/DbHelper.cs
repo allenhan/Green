@@ -10,11 +10,19 @@ namespace Green.Health.Data
 {
     public class DBResponsity
     {
-        private static DbProvider dbprovider = null;
+        private static DbProvider dbprovider = DbProviderFactory.GetInstance().CreateProvider("");
 
-        public static int ExcecuteCmd(string sql)
+        public static int ExcecuteCmd(string sql, string rwflag = "R")
         {
-            IDbConnection connection = dbprovider.OpenConnect();
+            IDbConnection connection = null;
+            if (rwflag == "R")
+            {
+                connection = dbprovider.OpenConnect(DataBaseRW.Read);
+            }
+            else
+            {
+                connection = dbprovider.OpenConnect(DataBaseRW.Write);
+            }
             try
             {
                 return connection.Execute(sql);
@@ -29,9 +37,17 @@ namespace Green.Health.Data
             }
         }
 
-        public static List<T> Query<T>(string sql)
+        public static List<T> Query<T>(string sql, string rwflag = "R")
         {
-            IDbConnection connection = dbprovider.OpenConnect();
+            IDbConnection connection = null;
+            if (rwflag == "R")
+            {
+                connection = dbprovider.OpenConnect(DataBaseRW.Read);
+            }
+            else
+            {
+                connection = dbprovider.OpenConnect(DataBaseRW.Write);
+            }
             try
             {
                 return connection.Query<T>(sql).ToList();
@@ -45,5 +61,6 @@ namespace Green.Health.Data
                 dbprovider.CloseConnect(connection);
             }
         }
+
     }
 }

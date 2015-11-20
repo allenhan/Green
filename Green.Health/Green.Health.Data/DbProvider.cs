@@ -10,7 +10,7 @@ namespace Green.Health.Data
 {
     public abstract class DbProvider
     {
-        public abstract IDbConnection OpenConnect();
+        public abstract IDbConnection OpenConnect(DataBaseRW RWFlag);
 
         public abstract void CloseConnect(IDbConnection connection);
     }

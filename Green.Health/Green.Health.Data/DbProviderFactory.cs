@@ -9,19 +9,30 @@ namespace Green.Health.Data
     {
         DataBaseManager dbSets = null;
 
-        public DbProvider CreateProvider(string dbname, int RWFlag = -1)
+        private readonly static DbProviderFactory instance = new DbProviderFactory();
+
+        private DbProviderFactory() {
+ 
+        }
+
+        public static DbProviderFactory GetInstance()
         {
-            dbSets = new DataBaseManager(dbname, DataBaseRW.Read);
+            return instance;
+        }
+
+        public DbProvider CreateProvider(string dbname)
+        {
+            dbSets = new DataBaseManager(dbname);
             DataBaseSet dbset = dbSets.GetDataBaseSet();
             string provider = dbset.Provider;
-            string connectString = dbset.DBItems.Find(c => c.DataBaseType == "").ConnectString;
             if (provider.ToLower() == "MYSQLPROVIDER")
             {
-                return new MySqlProvider(connectString);
+
+                return new MySqlProvider(dbset);
             }
             else
             {
-                return new SqlServerProvider(connectString);
+                return new SqlServerProvider(dbset);
             }
         }
     }
