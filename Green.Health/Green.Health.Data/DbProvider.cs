@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace Green.Health.Data
 {
+    /// <summary>
+    /// add by hj
+    /// 所有数据库提供者
+    /// </summary>
     public abstract class DbProvider
     {
         public abstract IDbConnection OpenConnect(DataBaseRW RWFlag);

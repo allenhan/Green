@@ -2,16 +2,17 @@
 <dal name="ord">
   <databaseSets>
 
-    <databaseSet name="orderdb" provider="sqlProvider">
-      <add name="orderdb_M" databaseType="Master" sharding="" connectionString="Server=localhost;Database=world;Uid=root;Pwd=toor;" />
-      <add name="orderdb_S" databaseType="Slave" sharding="" connectionString="Server=localhost;Database=world;Uid=root;Pwd=toor;" />
+    <databaseSet name="orderdb" provider="mysqlProvider">
+      <add name="orderdb_M" databaseType="R" sharding="" connectionString="Server=localhost;Database=world;Uid=root;Pwd=toor;" />
+      <add name="orderdb_S" databaseType="W" sharding="" connectionString="Server=localhost;Database=world;Uid=root;Pwd=toor;" />
+    </databaseSet>
+    
+    <databaseSet name="authdb" provider="mysqlProvider">
+      <add name="authdb_M" databaseType="R" sharding="" connectionString="Server=localhost;Database=demo;Uid=root;Pwd=toor;" />
+      <add name="authdb_S" databaseType="W" sharding="" connectionString="Server=localhost;Database=demo;Uid=root;Pwd=toor;" />
     </databaseSet>
     
   </databaseSets>
-  <databaseProviders>
-    <add name="sqlProvider" type="Arch.Data.DbEngine.Providers.SqlDatabaseProvider,Arch.Data"/>
-    <add name="mysqlProvider" type="Arch.Data.MySqlProvider.MySqlDatabaseProvider,Arch.Data.MySqlProvider" />
-  </databaseProviders>
 
 </dal>
 

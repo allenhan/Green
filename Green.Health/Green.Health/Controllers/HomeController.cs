@@ -8,13 +8,8 @@ namespace Green.Health.Controllers
 {
     public class HomeController : BaseController
     {
-        //
-        // GET: /Home/
-
         public ActionResult Index()
         {
-            string uid = Request.Cookies.Get("#555").ToString();
-
             return View();
         }
     }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Green.Health.IOC;
+using Microsoft.Practices.Unity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,6 +21,10 @@ namespace Green.Health
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            IUnityContainer container = UnityConfigurator.CreateContainer();
+            UnityControllerFactory factory = new UnityControllerFactory(container);
+            ControllerBuilder.Current.SetControllerFactory(factory);
         }
     }
 }

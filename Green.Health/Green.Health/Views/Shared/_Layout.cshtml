@@ -12,7 +12,8 @@
 <body>
 
 <div class="green-header">
-    @Html.Partial("_Head")
+    @*@Html.Partial("_Head")*@
+    @Html.Action("headlink","Common")
 </div>
 
 <div class="content">
@@ -31,6 +32,12 @@
             $('.u-box').hide();
             $('.log-dropdown').hide();
         })
+        $("#btn_in").bind('click', function (e) {
+            window.location.href = "/Login/Index";
+        });
+        $("#btn_out").bind('click', function (e) {
+            window.location.href = "/Login/LogOut";
+        });
     </script>
     @RenderSection("PageSpecificJavascriptIncludes", required: false)
 </body>

@@ -14,7 +14,6 @@ namespace Green.Health.Data
 
         public MySqlProvider(DataBaseSet dataBaseSet)
         {
-        
             this.dbset = dataBaseSet;
         }
 
@@ -26,6 +25,7 @@ namespace Green.Health.Data
             connection.Open();
             return connection;
         }
+
         public override void CloseConnect(IDbConnection connection)
         {
             if (connection.State != ConnectionState.Closed)

@@ -17,6 +17,7 @@ namespace Green.Health
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Maka", action = "ShowInfo", id = UrlParameter.Optional }
+               // namespaces: new[] { "Green.Health.Controllers" }
             );
         }
     }

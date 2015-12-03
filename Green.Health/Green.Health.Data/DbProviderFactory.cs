@@ -20,14 +20,18 @@ namespace Green.Health.Data
             return instance;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dbname">数据库名称</param>
+        /// <returns></returns>
         public DbProvider CreateProvider(string dbname)
         {
             dbSets = new DataBaseManager(dbname);
             DataBaseSet dbset = dbSets.GetDataBaseSet();
             string provider = dbset.Provider;
-            if (provider.ToLower() == "MYSQLPROVIDER")
+            if (provider.ToUpper() == "MYSQLPROVIDER")//mysqlProvider
             {
-
                 return new MySqlProvider(dbset);
             }
             else
