@@ -102,6 +102,7 @@
   <ItemGroup>
     <Content Include="App.config" />
     <Content Include="Config\dal.xml" />
+    <Content Include="JsTest.html" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -26,6 +26,7 @@ namespace Green.Utility
 
         public string GetAttributeValue(string rootPath,string name)
         {
+          
             XmlNode node = document.SelectSingleNode(rootPath);
 
             return node.InnerXml;

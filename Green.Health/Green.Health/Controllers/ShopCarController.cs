@@ -1,5 +1,4 @@
-﻿using Green.Health.Web.Framework.Security;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,15 +6,14 @@ using System.Web.Mvc;
 
 namespace Green.Health.Controllers
 {
-    public class MaKaController : BaseController
+    public class ShopCarController : Controller
     {
         //
-        // GET: /MaKa/
-        public ActionResult ShowInfo()
-        {
+        // GET: /ShopCar/
 
+        public ActionResult AddProduct()
+        {
             return View();
         }
-
     }
 }

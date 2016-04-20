@@ -214,19 +214,24 @@
                 </div>
                 <div class="pro-info">
                     <div class="l3">
-                        <button type="button" class="btn btn-success btn-lg" id="btn-buy"> 立刻购买</button>
-                        <button type="button" class="btn btn-default btn-lg"> 加入购物车</button>
+                        <button type="button" class="btn btn-success btn-lg" id="btn-buy">立刻购买</button>
+                        <button type="button" class="btn btn-default btn-lg" id="btn-addshopcar">加入购物车</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<input type="hidden" id="productid"/>
+
 @section PageSpecificJavascriptIncludes{
     <script>
         $("#btn-buy").bind('click', function (e) {
-            
             window.location.href = "/Order/comfirm_order";
+        });
+
+        $("#btn-addshopcar").bind('click', function (e) {
+            
         });
     </script>
 }

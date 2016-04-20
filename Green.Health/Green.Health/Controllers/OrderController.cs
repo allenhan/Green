@@ -25,6 +25,10 @@ namespace Green.Health.Controllers
                 string url = HttpUtility.UrlEncode(HttpContext.Request.Url.AbsolutePath);
                 return RedirectToAction("Index", "Login", new { rtnUrl = HttpContext.Request.Url });
             }
+            //查找显示购物车货物list
+
+
+
             return View();
         }
     }

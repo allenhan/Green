@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script type="text/javascript">
+        function Foo() {
+            getName = function () { document.writeln("1");}
+            return this;
+        }
+        Foo.getName = function () { document.writeln("2"); };
+        Foo.prototype.getName = function () { document.writeln("3"); };
+        var getName = function () { document.writeln("4"); };
+        function getName() { document.writeln("5"); };
+    </script>
+
+</head>
+
+<body>
+   
+   <script type="text/javascript">
+       Foo.getName();//2
+       getName();//4
+       Foo().getName();//1
+       getName();//1
+       new Foo.getName();//2
+       new Foo().getName();//3
+       new new Foo().getName();//3
+   </script>
+</body>
+</html>
